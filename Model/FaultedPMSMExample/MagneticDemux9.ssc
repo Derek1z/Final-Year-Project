@@ -1,0 +1,37 @@
+component MagneticDemux9
+% Magnetic Demux (9 ports)
+% This block represents a magnetic-domain mux / demux. The block splits a 
+% vector of 9 magnetic nodes into 9 magnetic ports.
+
+% Copyright 2023 The MathWorks, Inc.
+    
+    nodes
+        M1 = foundation.magnetic.magnetic; % :top
+        M2 = foundation.magnetic.magnetic; % :top
+        M3 = foundation.magnetic.magnetic; % :top
+        M4 = foundation.magnetic.magnetic; % :top
+        M5 = foundation.magnetic.magnetic; % :top
+        M6 = foundation.magnetic.magnetic; % :top
+        M7 = foundation.magnetic.magnetic; % :top
+        M8 = foundation.magnetic.magnetic; % :top
+        M9 = foundation.magnetic.magnetic; % :top
+    end
+    
+    for idxPort = 1:9
+        nodes
+            Mvec(idxPort) = foundation.magnetic.magnetic; % :bottom
+        end
+    end
+    
+    connections
+        connect(M1, Mvec(1))
+        connect(M2, Mvec(2))
+        connect(M3, Mvec(3))
+        connect(M4, Mvec(4))
+        connect(M5, Mvec(5))
+        connect(M6, Mvec(6))
+        connect(M7, Mvec(7))
+        connect(M8, Mvec(8))
+        connect(M9, Mvec(9))
+    end
+end

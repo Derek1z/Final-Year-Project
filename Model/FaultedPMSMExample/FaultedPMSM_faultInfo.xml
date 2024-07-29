@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/faultinfo_datamodel/R2021a">
+  <faultinfo.FaultContainerSet type="faultinfo.FaultContainerSet" uuid="53c268ee-c2e3-4c87-8dfb-9a48f6cbee4d">
+    <conditionals type="faultinfo.conditional.Conditional" uuid="b7a6a5b4-04e6-4cdc-b8fb-3e1622dc047f">
+      <condition>x == true</condition>
+      <mustBeLogged>false</mustBeLogged>
+      <name>SampleConditional</name>
+      <resyncRefBlkID></resyncRefBlkID>
+      <resyncUUID>00000000-0000-0000-0000-000000000000</resyncUUID>
+      <symbols type="faultinfo.conditional.ExpressionSymbol" uuid="cce60962-59fd-4c81-9358-18798fd52928">
+        <expression>true</expression>
+        <name>x</name>
+      </symbols>
+    </conditionals>
+    <faultContainers type="faultinfo.FaultContainer" uuid="08bbf07f-8213-401a-87f2-a63e8a08eff7">
+      <activeFault type="faultinfo.SSFault" uuid="8b2c5cec-1c8a-4325-9b20-ebc7851e8eec"/>
+      <faultedEntityID>SSSubelement|FaultedPMSM:2085|Winding</faultedEntityID>
+      <faultedEntityName>FaultedPMSM/Magnetic Domain Implementation of an SPMSM/Tooth 1 (faulted)/Winding</faultedEntityName>
+      <faults type="faultinfo.SSFault" uuid="8b2c5cec-1c8a-4325-9b20-ebc7851e8eec">
+        <faultDescription></faultDescription>
+        <faultName>Tooth1_faulted__fault</faultName>
+        <resyncUUID>00000000-0000-0000-0000-000000000000</resyncUUID>
+        <triggerOn type="faultinfo.PermanentTrigger" uuid="a4029fc1-78df-42d0-9d07-afd3444be402">
+          <isPersistent>true</isPersistent>
+        </triggerOn>
+      </faults>
+      <isEnabled>true</isEnabled>
+    </faultContainers>
+    <isEnabled>true</isEnabled>
+    <lastUpdatedAt>2024-06-11T20:17:28</lastUpdatedAt>
+    <modelName>FaultedPMSM</modelName>
+    <modelUUID>6e10c00b-f0b1-4c94-9c19-44a238afd611</modelUUID>
+  </faultinfo.FaultContainerSet>
+  <faultinfo.FailureModeContainer type="faultinfo.FailureModeContainer" uuid="94a2258d-608c-4a0a-bd2a-8fdc994c7b14">
+    <failureModes type="faultinfo.FailureMode" uuid="86529b18-fecd-46a1-aae8-424c29106a01">
+      <ID>1</ID>
+      <associatedFaults type="faultinfo.SSFault" uuid="8b2c5cec-1c8a-4325-9b20-ebc7851e8eec"/>
+      <faultSubsystemName>Tooth1_faulted__fault</faultSubsystemName>
+      <resyncUUID>00000000-0000-0000-0000-000000000000</resyncUUID>
+    </failureModes>
+    <faultModelName>FaultedPMSM_FaultModel</faultModelName>
+    <faultModelUUID>4b3044cd-2c2e-4ef0-a7eb-598163f79413</faultModelUUID>
+  </faultinfo.FailureModeContainer>
+</MF0>
